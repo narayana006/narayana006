@@ -2,7 +2,7 @@
 
 Engineering at Equifax.
 
-I build open-source tools for site reliability engineering, Apache Kafka operations, AWS and teams shipping software with large language models. Each project below is MIT licensed. "Working" projects have code, tests and CI; "Planned" projects are a design only, and every README states exactly what works today.
+I build open-source tools for site reliability engineering, Apache Kafka operations, AWS, Google Cloud and teams shipping software with large language models. Each project below is MIT licensed. "Working" projects have code, tests and CI; "Planned" projects are a design only, and every README states exactly what works today.
 
 ## SRE and reliability
 
@@ -43,6 +43,11 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [kafka-reassign-planner](https://github.com/narayana006/kafka-reassign-planner) | Working | Generate a balanced, throttled Kafka partition reassignment plan that moves as little data as possible. |
 | [kafka-config-diff](https://github.com/narayana006/kafka-config-diff) | Working | Compare broker and topic configuration between Kafka clusters or against a baseline file. |
 | [schema-compat-ci](https://github.com/narayana006/schema-compat-ci) | Working | Fail the build when an Avro, Protobuf or JSON schema change would break Kafka consumers, checked against Schema Registry. |
+| [kafka-acl-audit](https://github.com/narayana006/kafka-acl-audit) | Working | Audit Apache Kafka ACLs from kafka-acls output: flag wildcard principals and resources, overly broad operations, and duplicate or shadowed rules. |
+| [kafka-client-config-lint](https://github.com/narayana006/kafka-client-config-lint) | Working | Lint Kafka producer and consumer configs against durability, latency or throughput profiles, with an explanation for every finding. |
+| [kafka-partition-skew](https://github.com/narayana006/kafka-partition-skew) | Working | Find partition skew in Apache Kafka topics from kafka-log-dirs output: uneven partition sizes, hot brokers and disks, and likely key problems. |
+| [kafka-consumer-reset-plan](https://github.com/narayana006/kafka-consumer-reset-plan) | Working | Plan Kafka consumer group offset resets safely: preview the new offsets and lag, and print the exact kafka-consumer-groups command, never running it. |
+| [kafka-connect-doctor](https://github.com/narayana006/kafka-connect-doctor) | Working | Diagnose Kafka Connect connectors from the REST API status: failed tasks, classified errors, and a safe restart plan. |
 
 ## AWS command line and SDK
 
@@ -56,6 +61,11 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [cw-logs-multitail](https://github.com/narayana006/cw-logs-multitail) | Working | Tail several CloudWatch Logs groups at once in one merged, colour-coded stream with filters. |
 | [ssm-env-sync](https://github.com/narayana006/ssm-env-sync) | Working | Keep .env files and AWS Systems Manager Parameter Store in sync: diff, pull and push with a dry-run first. |
 | [boto3-patterns](https://github.com/narayana006/boto3-patterns) | Working | Small, runnable boto3 examples of the patterns every AWS script needs: pagination, retries, waiters, concurrency and assumed roles. |
+| [aws-tag-audit](https://github.com/narayana006/aws-tag-audit) | Working | Check AWS resources against your tagging policy: missing, empty or invalid tags, with a report by owner and service. |
+| [sg-exposure-check](https://github.com/narayana006/sg-exposure-check) | Working | Find AWS security groups that expose sensitive ports to the internet, and show which instances, load balancers and databases they actually reach. |
+| [aws-quota-watch](https://github.com/narayana006/aws-quota-watch) | Working | Show AWS service quotas that are close to their limits, using Service Quotas and CloudWatch usage metrics. |
+| [cfn-drift-report](https://github.com/narayana006/cfn-drift-report) | Working | Turn AWS CloudFormation drift results into a readable report: which resources drifted, what changed, and by how much. |
+| [ecr-image-cleanup-plan](https://github.com/narayana006/ecr-image-cleanup-plan) | Working | Plan Amazon ECR image cleanup: find untagged, old and unused images, estimate storage saved, and generate a lifecycle policy, dry-run first. |
 
 ## AWS Lambda
 
@@ -67,6 +77,16 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [lambda-uptime-ping](https://github.com/narayana006/lambda-uptime-ping) | Working | A tiny scheduled AWS Lambda that checks your URLs and posts to Slack when one is down or slow. |
 | [lambda-url-shortener](https://github.com/narayana006/lambda-url-shortener) | Working | A minimal serverless URL shortener on AWS Lambda and DynamoDB, as a small reference project. |
 | [lambda-python-starter](https://github.com/narayana006/lambda-python-starter) | Working | A clean starting point for Python AWS Lambda functions: structure, typed handlers, tests, local invoke and CI. |
+
+## Google Cloud
+
+| Project | Status | What it does |
+|---|---|---|
+| [gcp-iam-explain](https://github.com/narayana006/gcp-iam-explain) | Working | Explain a Google Cloud IAM policy in plain English and flag basic roles, public members, external domains and risky bindings. |
+| [gcp-firewall-audit](https://github.com/narayana006/gcp-firewall-audit) | Working | Audit Google Cloud VPC firewall rules: internet-exposed ports, overly broad rules, disabled and shadowed rules. |
+| [gcp-label-audit](https://github.com/narayana006/gcp-label-audit) | Working | Check Google Cloud resources against a labeling policy using a Cloud Asset Inventory export: missing, empty or invalid labels by project and type. |
+| [gcp-idle-resources](https://github.com/narayana006/gcp-idle-resources) | Working | Find Google Cloud resources you pay for but do not use: unattached disks, unused static IPs, old snapshots and stopped VMs with disks. |
+| [gcp-quota-check](https://github.com/narayana006/gcp-quota-check) | Working | Show Google Cloud Compute Engine quotas close to their limits across regions, from gcloud output, with CI-friendly exit codes. |
 
 ## AI engineering
 
