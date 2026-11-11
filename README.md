@@ -20,15 +20,15 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [toil-tracker](https://github.com/narayana006/toil-tracker) | Working | Measure operational toil from tickets and pages and rank the best candidates for automation. |
 | [cloud-cost-anomaly](https://github.com/narayana006/cloud-cost-anomaly) | Working | Detect unusual cloud spend from billing exports and explain which service, account or tag caused it. |
 | [error-budget-report](https://github.com/narayana006/error-budget-report) | Working | Generate a weekly error budget report from your SLO definitions and metrics, with what consumed the budget. |
-| [ai-postmortem](https://github.com/narayana006/ai-postmortem) | Working | Generate blameless postmortem drafts from incident Slack channels, PagerDuty/Opsgenie timelines and deploy logs. |
+| [ai-postmortem](https://github.com/narayana006/ai-postmortem) | Working | Build an incident timeline and a blameless postmortem draft from Slack exports, PagerDuty log entries, alert logs and deploy events. |
 | [incident-pattern-miner](https://github.com/narayana006/incident-pattern-miner) | Working | Cluster past incidents by theme to find repeat failure modes and produce quarterly reliability reports. |
 | [runbook-agent](https://github.com/narayana006/runbook-agent) | Working | Turn Markdown runbooks into agent-executable steps: read-only diagnostics run automatically, changes require human approval. Ships as an MCP server. |
-| [slo-suggest](https://github.com/narayana006/slo-suggest) | Working | Propose SLIs and SLOs from your existing access logs and Prometheus or Datadog metrics, and generate OpenSLO YAML plus burn-rate alerts. |
-| [oncall-handoff](https://github.com/narayana006/oncall-handoff) | Working | Summarize an on-call shift from pages, Slack and tickets into a clear handoff note. |
+| [slo-suggest](https://github.com/narayana006/slo-suggest) | Working | Suggest availability and latency SLOs from your access logs, and generate OpenSLO YAML plus Prometheus burn-rate alerts. |
+| [oncall-handoff](https://github.com/narayana006/oncall-handoff) | Working | Summarize an on-call shift from exported pages, Slack messages and tickets into a clear handoff note. |
 | [statuswall](https://github.com/narayana006/statuswall) | Planned | One dashboard for all vendor status pages (AWS, Google Cloud, Azure, GitHub, Cloudflare, ...) with historical uptime from public data. |
-| [incident-comms-drafter](https://github.com/narayana006/incident-comms-drafter) | Working | Draft status page updates and stakeholder messages during an incident from the live incident channel. |
+| [incident-comms-drafter](https://github.com/narayana006/incident-comms-drafter) | Working | Draft status page updates, executive summaries and support briefs from an incident channel export, checked against your house style. |
 | [gameday-planner](https://github.com/narayana006/gameday-planner) | Working | Propose failure-injection experiments for game days from your architecture and past incidents. |
-| [gcp-stockout-guard](https://github.com/narayana006/gcp-stockout-guard) | Working | Spot Google Cloud capacity stockouts early and automate Compute Engine reservations, using the Compute Engine advice APIs and stockout error logs. |
+| [gcp-stockout-guard](https://github.com/narayana006/gcp-stockout-guard) | Working | Find Google Cloud capacity stockouts in Compute Engine error logs and rank fallback zones, using saved Capacity Advisor responses. |
 | [ai-incident-management-companion](https://github.com/narayana006/ai-incident-management-companion) | Working | Companion code for the book AI-Driven Incident Management: fixtures, calculations, figures and labs. |
 
 ## Apache Kafka
@@ -78,14 +78,14 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [pii-scrub](https://github.com/narayana006/pii-scrub) | Working | Redact PII and secrets before text reaches an LLM, then restore them in the response. |
 | [structured-extract](https://github.com/narayana006/structured-extract) | Working | Schema in, validated JSON out: extract structured data from messy text with retries, repair and per-field confidence. |
 | [llm-observe](https://github.com/narayana006/llm-observe) | Working | Self-hosted, minimal LLM tracing: one-line SDK wrapper, SQLite storage and a local web UI for prompts, latency, cost and errors. |
-| [mcp-starter-kit](https://github.com/narayana006/mcp-starter-kit) | Working | Production-ready templates for building Model Context Protocol (MCP) servers in TypeScript and Python. |
-| [agent-skills-collection](https://github.com/narayana006/agent-skills-collection) | Working | A curated collection of reusable agent skills (SKILL.md) for release notes, migrations, security reviews, SEO and App Store audits. |
-| [rag-eval-lite](https://github.com/narayana006/rag-eval-lite) | Working | Measure RAG quality on your own documents: synthetic QA generation, retrieval recall and answer faithfulness, HTML report. |
-| [doc-ingest](https://github.com/narayana006/doc-ingest) | Working | One pipeline from PDF, HTML and DOCX to clean, metadata-rich chunks for any vector store. |
+| [mcp-starter-kit](https://github.com/narayana006/mcp-starter-kit) | Working | Tested starter templates for building Model Context Protocol (MCP) servers in TypeScript and Python. |
+| [agent-skills-collection](https://github.com/narayana006/agent-skills-collection) | Working | Reusable agent skills (SKILL.md plus scripts) for release notes, migrations, security reviews and SEO audits, with a skill linter. |
+| [rag-eval-lite](https://github.com/narayana006/rag-eval-lite) | Working | Measure RAG quality offline: retrieval recall, precision, MRR and nDCG, deterministic answer checks, and an HTML report. |
+| [doc-ingest](https://github.com/narayana006/doc-ingest) | Working | One command from text, Markdown, HTML, DOCX and PDF files to clean, section-aware JSONL chunks with source metadata. |
 | [agent-patterns](https://github.com/narayana006/agent-patterns) | Working | Small, runnable reference implementations of common AI agent patterns, each under 200 lines. |
-| [ai-alert-explainer](https://github.com/narayana006/ai-alert-explainer) | Working | Explain any alert or signal in plain English: rule-based checks plus an LLM verdict with reasoning and confidence. |
-| [expo-ai-starter](https://github.com/narayana006/expo-ai-starter) | Working | Expo / React Native starter with streaming AI chat, voice input, secure backend proxy and App Store-ready defaults. |
-| [ai-pr-reviewer-action](https://github.com/narayana006/ai-pr-reviewer-action) | Working | GitHub Action for AI pull request review driven by plain-English rules in .ai-review.md, commenting only on high-confidence findings. |
+| [ai-alert-explainer](https://github.com/narayana006/ai-alert-explainer) | Working | Turn an alert into an ACT / WATCH / IGNORE verdict with reasons and a confidence score: rule-based, with an optional model step. |
+| [expo-ai-starter](https://github.com/narayana006/expo-ai-starter) | Working | Expo / React Native starter with a streaming AI chat screen and a backend proxy that keeps API keys out of the app. |
+| [ai-pr-reviewer-action](https://github.com/narayana006/ai-pr-reviewer-action) | Working | GitHub Action that reviews pull requests against plain-English rules in .ai-review.md, commenting only on high-confidence findings. |
 
 ## Get in touch
 
