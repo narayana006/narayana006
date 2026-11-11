@@ -2,7 +2,7 @@
 
 Engineering at Equifax.
 
-I build open-source tools for site reliability engineering, Apache Kafka operations and teams shipping software with large language models. Each project below is MIT licensed. "Working" projects have code, tests and CI; "Planned" projects are a design only, and every README states exactly what works today.
+I build open-source tools for site reliability engineering, Apache Kafka operations, AWS and teams shipping software with large language models. Each project below is MIT licensed. "Working" projects have code, tests and CI; "Planned" projects are a design only, and every README states exactly what works today.
 
 ## SRE and reliability
 
@@ -43,6 +43,30 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [kafka-reassign-planner](https://github.com/narayana006/kafka-reassign-planner) | Working | Generate a balanced, throttled Kafka partition reassignment plan that moves as little data as possible. |
 | [kafka-config-diff](https://github.com/narayana006/kafka-config-diff) | Working | Compare broker and topic configuration between Kafka clusters or against a baseline file. |
 | [schema-compat-ci](https://github.com/narayana006/schema-compat-ci) | Working | Fail the build when an Avro, Protobuf or JSON schema change would break Kafka consumers, checked against Schema Registry. |
+
+## AWS command line and SDK
+
+| Project | Status | What it does |
+|---|---|---|
+| [aws-whoami-plus](https://github.com/narayana006/aws-whoami-plus) | Working | Show exactly which AWS identity, account, region and role chain your shell is using, and when the session expires. |
+| [aws-profile-switch](https://github.com/narayana006/aws-profile-switch) | Working | Switch AWS profiles and SSO sessions quickly from the terminal, with fuzzy search and automatic login. |
+| [s3-du](https://github.com/narayana006/s3-du) | Working | A du for Amazon S3: show how much storage each bucket and prefix uses, by storage class, without listing every object. |
+| [aws-unused-finder](https://github.com/narayana006/aws-unused-finder) | Working | Find AWS resources you are paying for but not using: unattached volumes, idle IPs, old snapshots, empty load balancers and more. |
+| [iam-policy-explain](https://github.com/narayana006/iam-policy-explain) | Working | Explain an AWS IAM policy in plain English and flag wildcards, privilege escalation paths and public access. |
+| [cw-logs-multitail](https://github.com/narayana006/cw-logs-multitail) | Working | Tail several CloudWatch Logs groups at once in one merged, colour-coded stream with filters. |
+| [ssm-env-sync](https://github.com/narayana006/ssm-env-sync) | Working | Keep .env files and AWS Systems Manager Parameter Store in sync: diff, pull and push with a dry-run first. |
+| [boto3-patterns](https://github.com/narayana006/boto3-patterns) | Working | Small, runnable boto3 examples of the patterns every AWS script needs: pagination, retries, waiters, concurrency and assumed roles. |
+
+## AWS Lambda
+
+| Project | Status | What it does |
+|---|---|---|
+| [lambda-cold-start-bench](https://github.com/narayana006/lambda-cold-start-bench) | Working | Measure AWS Lambda cold start times across memory sizes from REPORT log lines, with cold versus warm statistics and a chart. |
+| [lambda-rightsize](https://github.com/narayana006/lambda-rightsize) | Working | Recommend a memory setting for each AWS Lambda function from its REPORT logs or CloudWatch Logs Insights exports, with estimated savings. |
+| [lambda-dlq-redrive](https://github.com/narayana006/lambda-dlq-redrive) | Working | Inspect, filter and safely replay failed events from AWS Lambda dead-letter queues. |
+| [lambda-uptime-ping](https://github.com/narayana006/lambda-uptime-ping) | Working | A tiny scheduled AWS Lambda that checks your URLs and posts to Slack when one is down or slow. |
+| [lambda-url-shortener](https://github.com/narayana006/lambda-url-shortener) | Working | A minimal serverless URL shortener on AWS Lambda and DynamoDB, as a small reference project. |
+| [lambda-python-starter](https://github.com/narayana006/lambda-python-starter) | Working | A clean starting point for Python AWS Lambda functions: structure, typed handlers, tests, local invoke and CI. |
 
 ## AI engineering
 
