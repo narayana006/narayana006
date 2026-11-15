@@ -25,7 +25,7 @@ I build open-source tools for site reliability engineering, Apache Kafka operati
 | [runbook-agent](https://github.com/narayana006/runbook-agent) | Working | Turn Markdown runbooks into agent-executable steps: read-only diagnostics run automatically, changes require human approval. Ships as an MCP server. |
 | [slo-suggest](https://github.com/narayana006/slo-suggest) | Working | Suggest availability and latency SLOs from your access logs, and generate OpenSLO YAML plus Prometheus burn-rate alerts. |
 | [oncall-handoff](https://github.com/narayana006/oncall-handoff) | Working | Summarize an on-call shift from exported pages, Slack messages and tickets into a clear handoff note. |
-| [statuswall](https://github.com/narayana006/statuswall) | Planned | One dashboard for all vendor status pages (AWS, Google Cloud, Azure, GitHub, Cloudflare, ...) with historical uptime from public data. |
+| [statuswall](https://github.com/narayana006/statuswall) | Working | One dashboard for all vendor status pages (AWS, Google Cloud, Azure, GitHub, Cloudflare, ...) with historical uptime from public data. |
 | [incident-comms-drafter](https://github.com/narayana006/incident-comms-drafter) | Working | Draft status page updates, executive summaries and support briefs from an incident channel export, checked against your house style. |
 | [gameday-planner](https://github.com/narayana006/gameday-planner) | Working | Propose failure-injection experiments for game days from your architecture and past incidents. |
 | [gcp-stockout-guard](https://github.com/narayana006/gcp-stockout-guard) | Working | Find Google Cloud capacity stockouts in Compute Engine error logs and rank fallback zones, using saved Capacity Advisor responses. |
